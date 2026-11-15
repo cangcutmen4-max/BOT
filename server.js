@@ -15,7 +15,7 @@ app.post('/api/chat', async (req, res) => {
     const response = await axios.post(
       'https://api.groq.com/openai/v1/chat/completions',
       {
-        model: "llama-3.1-8b-instant",
+        model: "openai/gpt-oss-20b",
         messages: [
           { role: "system", content: "Kamu adalah Nova, CS dari NovaTopUp (top up game). Jawab santai pakai bahasa gaul. Bantu buyer, jelasin cara top up, dan kalo minta admin bilang 'Oke saya sambungkan ke admin'." },
           { role: "user", content: userMessage }
